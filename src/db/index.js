@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { DB_NAME } from "../constant.js";
 
 //whenever we make connection in db we always use try and catch beacuse the data came from db some time error and always use async await
-a;
+
 
 const connectDB = async () => {
   try {

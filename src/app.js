@@ -15,9 +15,21 @@ app.use(express.json({ limit: "32kb" })); // Limit the size of incoming JSON pay
 //url encoded use because of the ehrn url frtched then the decoading like bhargav+sojitra
 app.use(express.urlencoded({ extended: true, limit: "16kb" })); // Parse URL-encoded data with the text/plain type
 
-app.use(express.static('public'))
+app.use(express.static("public"));
 
 app.use(cookieParser());
+
+//routres
+
+import userRouter from './routes/user.routes.js'
+
+
+//routes declaration
+
+
+app.use("/api/v1/users" , userRouter)
+
+
 
 
 export { app };
