@@ -18,6 +18,7 @@ const uploadOnCloud = async (localPath) => {
 
     // file succesfully upload
     console.log("file upload on cloudnary", response.url);
+    fs.unlinkSync(localPath)
     return response;
   } catch (error) {
     fs.unlinkSync(localPath) // remove the loacally saved unwanted file
